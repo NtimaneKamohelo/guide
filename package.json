@@ -1,0 +1,17 @@
+{
+  "name": "guide",
+  "version": "1.0.0",
+  "description": "Flutter based web application",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "flutter test",
+    "build": "flutter build web"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
