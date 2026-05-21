@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guide/widgets/navigation_bar/navbar_item.dart';
+import 'package:guide/widgets/navigation_bar/navbar_logo.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -10,19 +12,15 @@ class NavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          SizedBox(
-            height: 80,
-            width: 150,
-            child: Image.asset('assets/location_logo.png'),
-          ),
+          NavBarLogo(),
           Row(
             mainAxisSize: MainAxisSize.min, 
             children: <Widget>[
-              _NavBarItem('Episodes'),
+              NavBarItem('Episodes'),
               SizedBox(
                 width: 60,
               ),
-              _NavBarItem('About'),
+              NavBarItem('About'),
             ],
           ),
         ],
@@ -31,13 +29,4 @@ class NavBar extends StatelessWidget {
   }
 }
 
-//Keep the styling consistence on the navigation
-class _NavBarItem extends StatelessWidget {
-  final String title;
-  const _NavBarItem(this.title);
 
-  @override
-  Widget build(BuildContext context) {
-    return Text(title, style: TextStyle(fontSize: 18));
-  }
-}
